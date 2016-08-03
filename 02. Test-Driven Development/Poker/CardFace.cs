@@ -14,7 +14,6 @@
         Jack = 11,
         Queen = 12,
         King = 13,
-        Ace = 14,
-        Jam = 15
+        Ace = 14
     }
 }
