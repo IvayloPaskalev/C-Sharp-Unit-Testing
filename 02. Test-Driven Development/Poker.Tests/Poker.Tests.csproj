@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="CardTests.cs" />
     <Compile Include="HandTests.cs" />
+    <Compile Include="PokerHandsCheckerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

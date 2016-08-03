@@ -4,9 +4,28 @@ namespace Poker
 {
     public class PokerHandsChecker : IPokerHandsChecker
     {
+        private const int ValidHandCount = 5;
+
         public bool IsValidHand(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand.Cards.Count != ValidHandCount)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < ValidHandCount - 1; i++)
+            {
+                for (int j = i + 1; j < ValidHandCount; j++)
+                {
+                    if (hand.Cards[i].Face == hand.Cards[j].Face &&
+                            hand.Cards[i].Suit == hand.Cards[j].Suit)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
 
         public bool IsStraightFlush(IHand hand)
