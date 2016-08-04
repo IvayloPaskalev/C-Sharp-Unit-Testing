@@ -90,7 +90,5 @@
             Assert.IsTrue(cheker.IsFlush(mockedHand));
 
         }
-
-
     }
 }
