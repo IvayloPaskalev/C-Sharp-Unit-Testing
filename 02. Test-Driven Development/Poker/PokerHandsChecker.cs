@@ -45,7 +45,18 @@ namespace Poker
 
         public bool IsFlush(IHand hand)
         {
-            throw new NotImplementedException();
+            var firstCardSuit = hand.Cards[0].Suit;
+
+            for (int i = 1; i < hand.Cards.Count; i++)
+            {
+                var currentCardSuit = hand.Cards[i].Suit;
+                if (firstCardSuit != currentCardSuit)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public bool IsStraight(IHand hand)
