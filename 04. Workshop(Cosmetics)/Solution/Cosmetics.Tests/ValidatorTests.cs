@@ -54,7 +54,7 @@
             // Arrange
             var exampleString = "20CharactersLongText";
 
-            // Act && Assert
+            // Act and Assert
             Assert.Throws<IndexOutOfRangeException>(() => Validator.CheckIfStringLengthIsValid(exampleString, maxLenght, minLenght));
         }
 
@@ -67,7 +67,7 @@
             // Arrange
             var exampleString = "20CharactersLongText";
 
-            // Act && Assert
+            // Act and Assert
             Assert.DoesNotThrow(() => Validator.CheckIfStringLengthIsValid(exampleString, maxLenght, minLenght));
         }
     }
